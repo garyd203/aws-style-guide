@@ -12,7 +12,7 @@ Style guide for your AWS account
 * enable AWS Config region-by-region for all regions you use
 
 ### Configure User Logins
-* create a new IAM user for yourself, and attach the AdminstratorAccess policy. Then logout from the root account (and never login to the root account again!), login as the IAM user, setup MFA.
+* create a new IAM user for yourself, and attach the AdminstratorAccess policy. Then logout from the root account (and never login to the root account again!), login as the IAM user (dont forget to change to your preferred region) and setup MFA.
 * Create groups to manage permissiosn, and migrate yourself into a relevant group
 * Setup a password policy: Minimum length, required characters, password expiry, 
 * Deactivate STS tokens (IAM->Account Settings) for all regions you don't intend to use. For some AWS accounts (eg. master account or loggign account), this may be all regions because STS should not be used.
