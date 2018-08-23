@@ -12,6 +12,7 @@ Style guide and cookbook for your AWS account
 * Enable 2fa for root account
 * Allow billing access to IAM users (if this is the Master Account)
 * Setup support plan
+* Setup account alias (can do this later)
 
 ### Configure User Logins
 * create a new IAM user for yourself, and attach the AdminstratorAccess policy. Then logout from the root account (and never login to the root account again!), login as the IAM user (dont forget to change to your preferred region) and setup MFA.
