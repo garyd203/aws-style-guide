@@ -10,9 +10,9 @@ Style guide and cookbook for your AWS account
 ### Create account + configure root account
 * Use strong password for root account
 * Enable 2fa for root account
-* Allow billing access to IAM users (if this is the Master Account)
+* Allow billing access to IAM users (if this is the Master Account) - https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html
 * Setup support plan
-* Setup account alias (can do this later)
+* Setup account alias (can do this later) -> IAM -> Dashboard-> IAM users sign-in lin" -> Customize
 
 ### Configure User Logins
 * create a new IAM user for yourself, and attach the AdminstratorAccess policy. Then logout from the root account (and never login to the root account again!), login as the IAM user (dont forget to change to your preferred region) and setup MFA.
@@ -25,7 +25,5 @@ If this is the master account for a Multi-Account setup, then you should setup t
 * Create an Organization
 * Setup an account structure with Organizational Units, if desired
 * Setup Service Control Policies to limit access to services for specific accounts. Note that you can't apply an SCP to the master account (it alwasy allows everything)
-* Enable trusted access for services we want to use, so they can create service-linked roles in all accounts.
-  * Probably not necessary? Doco suggests you should just do that in the linked service
 
 ## Tagging Strategy
